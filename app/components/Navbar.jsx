@@ -3,6 +3,7 @@ import { GoSearch } from "react-icons/go";
 import { FaBagShopping } from "react-icons/fa6";
 import { FaUserLarge } from "react-icons/fa6";
 
+
 const Navbar = () => {
   return (
     <nav className=' flex header fixed top-0 h-20 w-full justify-between z-10'>
