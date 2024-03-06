@@ -12,16 +12,16 @@ const TopCategories = () => {
         <div className='flex justify-center items-center'>
             <div className="carousel  h-[80vh] w-[72vw]">
                   <div className="carousel-item w-[18vw]  relative hover:scale-105 duration-700 ">
-                    <div className='absolute w-full h-full fade font-serif text-white text-3xl hover:bg-transparent duration-700'> 
+                    <div className='absolute w-full h-full fade1 font-serif text-white text-3xl hover:bg-transparent duration-700'> 
                         <div className='flex justify-center text-center pt-[10vh] px-[5vw]'>
                           <h2>Trend Tops</h2>
                         </div> 
                     </div>
-                    <img src={'/cat1.jpg'} alt="Burger" className='object-cover'/>
+                    <img src={'/cat1.jpg'} alt="Burger" className='object-fit'/>
                   </div> 
 
                   <div className="carousel-item w-[18vw] relative hover:scale-105 duration-700">
-                    <div className='absolute fade w-full h-full font-serif text-white text-3xl hover:bg-transparent duration-700'> 
+                    <div className='absolute fade1 w-full h-full font-serif text-white text-3xl hover:bg-transparent duration-700'> 
                         <div className='flex justify-center text-center pt-[10vh] px-[5vw]'>
                           <h2>Ethnic Extravaganza</h2>
                         </div> 
@@ -30,7 +30,7 @@ const TopCategories = () => {
                   </div> 
 
                   <div className="carousel-item w-[18vw] relative hover:scale-105 duration-700">
-                    <div className='absolute fade w-full h-full font-serif text-white text-3xl hover:bg-transparent duration-700'> 
+                    <div className='absolute fade1 w-full h-full font-serif text-white text-3xl hover:bg-transparent duration-700'> 
                         <div className='flex justify-center text-center pt-[10vh] px-[5vw] '>
                           <h2>Everyday Elegance</h2>
                         </div> 
@@ -39,7 +39,7 @@ const TopCategories = () => {
                   </div> 
 
                   <div className="carousel-item w-[18vw] relative hover:scale-105 duration-700">
-                    <div className='absolute fade w-full h-full font-serif text-white text-3xl hover:bg-transparent duration-700'> 
+                    <div className='absolute fade1 w-full h-full font-serif text-white text-3xl hover:bg-transparent duration-700'> 
                         <div className='flex justify-center text-center pt-[10vh] px-[5vw]'>
                           <h2>Light, Camera, Fashion</h2>
                         </div> 
@@ -48,7 +48,7 @@ const TopCategories = () => {
                   </div> 
 
                   <div className="carousel-item w-[18vw] relative hover:scale-105 duration-700">
-                    <div className='absolute fade w-full h-full font-serif text-white text-3xl hover:bg-transparent duration-700'> 
+                    <div className='absolute fade1 w-full h-full font-serif text-white text-3xl hover:bg-transparent duration-700'> 
                         <div className='flex justify-center text-center pt-[10vh] px-[5vw]'>
                           <h2>Cultural Couture</h2>
                         </div> 
@@ -57,7 +57,7 @@ const TopCategories = () => {
                   </div> 
 
                   <div className="carousel-item w-[18vw] relative hover:scale-105 duration-700">
-                    <div className='absolute fade w-full h-full font-serif text-white text-3xl hover:bg-transparent duration-700'> 
+                    <div className='absolute fade1 w-full h-full font-serif text-white text-3xl hover:bg-transparent duration-700'> 
                         <div className='flex justify-center text-center pt-[10vh] px-[5vw]'>
                           <h2>Ethereal Allure</h2>
                         </div> 
@@ -66,7 +66,7 @@ const TopCategories = () => {
                   </div> 
 
                   <div className="carousel-item w-[18vw] relative hover:scale-105 duration-700">
-                    <div className='absolute fade w-full h-full font-serif text-white text-3xl hover:bg-transparent duration-700'> 
+                    <div className='absolute fade1 w-full h-full font-serif text-white text-3xl hover:bg-transparent duration-700'> 
                         <div className='flex justify-center text-center pt-[10vh] px-[5vw]'>
                           <h2>Global Chic</h2>
                         </div> 
