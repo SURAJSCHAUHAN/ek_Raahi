@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+body{
+    background-color: #eadfdf;
+}
 
 .header{
     background-color: rgba(0,0,0,0.1);
