@@ -7,6 +7,8 @@ import NewArrivals from './components/NewArrivals'
 import ServicesIcon from './components/ServicesIcon'
 import BestSellers from './components/BestSellers'
 import Footer from './components/Footer'
+import Recommended from './components/Recommended'
+import NewEra from './components/NewEra'
 
 const page = () => {
   return (
@@ -18,7 +20,9 @@ const page = () => {
       <NewArrivals/>
       <ServicesIcon/>
       <BestSellers/>
+      <Recommended/>
       <Footer/>
+      <NewEra/>
     </div>
   )
 }
