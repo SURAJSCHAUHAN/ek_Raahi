@@ -8,21 +8,17 @@ import ServicesIcon from './components/ServicesIcon'
 import BestSellers from './components/BestSellers'
 import Footer from './components/Footer'
 import Recommended from './components/Recommended'
-import NewEra from './components/NewEra'
 
 const page = () => {
   return (
     <div>
-      <Navbar/>
       <SideMenu/>
       <Hero/>
       <TopCategories/>
       <NewArrivals/>
       <ServicesIcon/>
       <BestSellers/>
-      <Recommended/>
-      <Footer/>
-      <NewEra/>
+      {/* <Recommended/> */}
     </div>
   )
 }
