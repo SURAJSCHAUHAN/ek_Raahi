@@ -6,7 +6,7 @@ const UserContextProvider=({children})=>{
     const [userdata,setUserData]=useState({});
     const [loggedin,setLoggedin]=useState(false);
     const [customertoken,setCustomerToken]=useState('');
-    const accessToken='VcP-iPoC2duk_fhqLFxd-U_Y_BicJN5l';
+    const accessToken='jNNg7nba3Qtf7g2W22nz7uEYLOikA0Gq';
 
     return(
         <UserContext.Provider value={{accessToken, userdata, setUserData, loggedin, setLoggedin, customertoken, setCustomerToken}}>

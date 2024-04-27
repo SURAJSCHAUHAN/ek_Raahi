@@ -1,8 +1,9 @@
 'use client'
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useContext} from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation';
 import toast from "react-hot-toast";
+import UserContext from '../context/UserContext';
 
 const page = () => {
 
@@ -12,13 +13,15 @@ const page = () => {
     const [password,setPassword]=useState('');
     const [loading,setLoading]=useState(false);
 
+    const {accessToken}=useContext(UserContext);
+
     const router= useRouter();
 
     useEffect(()=>{
         if(loading){
             const myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
-            myHeaders.append("Authorization", "Bearer IOOwSkZyfnz_kZCJSz908zyYJKOYlbcQ");
+            myHeaders.append("Authorization", `Bearer ${accessToken}`);
 
             const raw = JSON.stringify({
             "email": email,

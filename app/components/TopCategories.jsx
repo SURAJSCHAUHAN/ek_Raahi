@@ -1,14 +1,16 @@
 'use client'
-import React, { useEffect,useState } from 'react'
+import React, { useEffect,useState,useContext } from 'react'
+import UserContext from '../context/UserContext';
 
 
 const TopCategories = () => {
 
   const [categories,setCategories]=useState([]);
+  const {accessToken}=useContext(UserContext);
 
   useEffect(()=>{
     const myHeaders = new Headers();
-    myHeaders.append("Authorization", "Bearer VcP-iPoC2duk_fhqLFxd-U_Y_BicJN5l");
+    myHeaders.append("Authorization", `Bearer ${accessToken}`);
 
     const raw = "";
 
