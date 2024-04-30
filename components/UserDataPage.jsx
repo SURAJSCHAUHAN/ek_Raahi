@@ -4,11 +4,10 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import UserContext from '../context/UserContext'
 
-const UserDescription = () => {
+const UserDataPage = () => {
 
-  const router=useRouter();
-
-    const {loggedin,customertoken}=useContext(UserContext);
+    const {loggedin}=useContext(UserContext);
+    const {customertoken}=useContext(UserContext);
 
     const [userInfo,setUserInfo]=useState({});
 
@@ -32,6 +31,9 @@ const UserDescription = () => {
           })
           .catch((error) => console.error(error));
     },[]);
+
+
+    const router=useRouter();
 
   return (
     <div className='h-[100vh] flex pt-32 px-10'>
@@ -84,4 +86,4 @@ const UserDescription = () => {
   )
 }
 
-export default UserDescription
+export default UserDataPage

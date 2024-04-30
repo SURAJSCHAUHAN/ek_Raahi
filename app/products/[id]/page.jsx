@@ -1,5 +1,5 @@
 'use client'
-import ProductDescription from '@/app/components/ProductDescription'
+import ProductDescription from '@/components/ProductDescription'
 import { useParams } from 'next/navigation'
 import React from 'react'
 

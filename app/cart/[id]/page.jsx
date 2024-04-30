@@ -1,6 +1,6 @@
-import CartList from '@/app/components/CartList'
+import CartList from '@/components/CartList'
 import React,{useContext} from 'react'
-import UserContext from '@/app/context/UserContext'
+import UserContext from '@/context/UserContext'
 
 const page = () => {
 

@@ -2,7 +2,7 @@
 'use client'
 import { useParams } from 'next/navigation';
 import React, { useEffect, useState, useContext } from 'react'
-import UserContext from '@/app/context/UserContext';
+import UserContext from '@/context/UserContext';
 
 const ProductDescription = ({id}) => {
 

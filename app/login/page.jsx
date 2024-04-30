@@ -3,7 +3,7 @@ import React,{useContext, useEffect, useState} from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation';
 import toast from "react-hot-toast";
-import UserContext from '../context/UserContext';
+import UserContext from '../../context/UserContext';
 
 const page = () => {
 
