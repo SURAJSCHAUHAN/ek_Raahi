@@ -11,7 +11,7 @@ import UserContext from '../context/UserContext';
 const Navbar = () => {
 
   const router=useRouter();
-  const {loggedin} = useContext(UserContext);
+  const {loggedin,cartitemNO} = useContext(UserContext);
 
   return (
     <nav className=' flex header fixed top-0 h-20 w-full justify-between z-10'>
@@ -19,10 +19,12 @@ const Navbar = () => {
         <div className='flex items-center pr-10'>
                 {loggedin?(
                     <div className='flex space-x-10'>
-                        <div className='relative'>
-                          <FaBagShopping size={30} color='white'/>
-                          <div className='absolute -top-1 -right-2 rounded-full w-4 h-4 text-sm p-3 flex justify-center items-center bg-[#e1e1e1]'>5</div>
-                        </div>
+                        <Link href={'cart'}>
+                          <div className='relative'>
+                            <FaBagShopping size={30} color='white'/>
+                            <div className='absolute -top-1 -right-2 rounded-full w-4 h-4 text-sm p-3 flex justify-center items-center bg-[#e1e1e1]'>{cartitemNO}</div>
+                          </div>
+                        </Link>
                         <Link href={'userdetail'}><FaUserLarge size={30} color='white'/></Link>
                         <IoIosLogOut size={30} color='white'/>
                     </div>

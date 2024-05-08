@@ -11,7 +11,7 @@ const page = () => {
     const [password,setPassword]=useState('');
     const [loading,setLoading]=useState(false);
 
-    const {setLoggedin,setCustomerToken} = useContext(UserContext);
+    const {setLoggedin,setCustomerToken,setCartID,setCartVersion,setCartItems,setCartValue,setCartItemNO} = useContext(UserContext);
 
     const router= useRouter();
 
@@ -41,7 +41,55 @@ const page = () => {
                 router.push('/');
                 setLoggedin(true);
                 setCustomerToken(result.access_token);
+                return result.access_token;
             } )
+            .then((response) =>{
+                    const myHeaders = new Headers();
+                    myHeaders.append("Content-Type", "application/vnd.api+json");
+                    myHeaders.append("Authorization", `Bearer ${response}`);
+                    const requestOptions = {
+                    method: "GET",
+                    headers: myHeaders,
+                    redirect: "follow"
+                    };
+                    fetch("https://api.us-central1.gcp.commercetools.com/ekraahi-suraj/me/active-cart", requestOptions)
+                    .then((response) => response.json())
+                    .then((response)=>{
+                        if(response.statusCode==404){
+                            const myHeaders = new Headers();
+                            myHeaders.append("Content-Type", "application/json");
+                            myHeaders.append("Authorization", `Bearer ${response}`);
+
+                            const raw = JSON.stringify({
+                            "currency": "USD"
+                            });
+
+                            const requestOptions = {
+                            method: "POST",
+                            headers: myHeaders,
+                            body: raw,
+                            redirect: "follow"
+                            };
+
+                            fetch("https://api.us-central1.gcp.commercetools.com/ekraahi-suraj/me/carts", requestOptions)
+                            .then((response) => response.json())
+                            .then((response)=>{
+                                setCartID(response.id);
+                                setCartVersion(response.version);
+                                return response.id;
+                            })
+                            .catch((error) => console.error(error));
+                        }
+                        else{
+                            setCartID(response.id);
+                            setCartVersion(response.version);
+                            setCartItems(response.lineItems);
+                            setCartValue(response.totalPrice.centAmount/100);
+                            setCartItemNO(response.totalLineItemQuantity);
+                        }
+                    })
+                    .catch((error) => console.error(error));
+            })
             .catch((error) => {
                 console.error(error);
                 router.refresh('');

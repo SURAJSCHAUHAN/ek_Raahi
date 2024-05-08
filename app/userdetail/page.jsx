@@ -1,14 +1,10 @@
-
+import UserDataPage from '@/components/UserDataPage'
 import React from 'react'
 
-import UserDataPage from '../../components/UserDataPage'
-
 const page = () => {
-
-    
   return (
     <div>
-      <UserDataPage/>
+        <UserDataPage/>
     </div>
   )
 }

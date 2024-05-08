@@ -1,10 +1,7 @@
 import CartList from '@/components/CartList'
-import React,{useContext} from 'react'
-import UserContext from '@/context/UserContext'
+import React from 'react'
 
 const page = () => {
-
-    const {customertoken}=useContext(UserContext);
 
   return (
     <div>
